@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRITEL WALLET 🪙</title>
+    <style>
+        body {
+            background-color: #808080; /* Grey background */
+            color: #9370DB; /* Light Purple text color */
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #D3D3D3; /* Light Grey container background */
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        button {
+            background-color: #9370DB; /* Light Purple button color */
+            color: #fff; /* White text color */
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #663399; /* Darker Purple on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1>BRITEL WALLET 🪙</h1>
+
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <div id="welcomeMessage" style="display: none;"></div>
+
+    <div id="options" style="display: none;">
+        <h2>Options:</h2>
+        <button onclick="showBalance()">Check Balance</button>
+        <button onclick="showTransfer()">Transfer</button>
+        <button onclick="showReceive()">Receive</button>
+        <button onclick="showWithdrawal()">Withdrawal</button>
+        <br>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="balance" style="display: none;"></div>
+    <div id="transfer" style="display: none;"></div>
+    <div id="receive" style="display: none;"></div>
+    <div id="withdrawal" style="display: none;"></div>
+
+</div>
+
+<script>
+    let loggedIn = false;
+
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username === 'Gianna' && password === 'lynch1234') {
+            loggedIn = true;
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('welcomeMessage').innerText = 'Welcome Gianna Lynch!';
+            document.getElementById('welcomeMessage').style.display = 'block';
+            document.getElementById('options').style.display = 'block';
+        } else {
+            alert('Invalid credentials. Please try again.');
+        }
+    }
+
+    function showBalance() {
+        document.getElementById('balance').innerText = 'Available Balance: $20,000 (0.47 Bitcoin)';
+        document.getElementById('balance').style.display = 'block';
+    }
+
+    function showTransfer() {
+        // Check if bull run is completed
+        const bullRunCompleted = false; // Change this based on your logic
+
+        if (bullRunCompleted) {
+            document.getElementById('transfer').innerText = 'List of available balances for transfer';
+            document.getElementById('transfer').style.display = 'block';
+        } else {
+            alert('Complete your bull run to access this option.');
+        }
+    }
+
+    function showReceive() {
+        document.getElementById('receive').innerText = 'Your BTC Wallet Address: bc1qpq2mvysejacsz5a2es3fgap7jmr9v6lzndxt88';
+        document.getElementById('receive').style.display = 'block';
+    }
+
+    function showWithdrawal() {
+        // Check if bull run is completed
+        const bullRunCompleted = false; // Change this based on your logic
+
+        if (bullRunCompleted) {
+            document.getElementById('withdrawal').innerText = 'You can only access this option when you have completed your bull run.';
+            document.getElementById('withdrawal').style.display = 'block';
+        } else {
+            alert('Complete your bull run to access this option.');
+        }
+    }
+
+    function logout() {
+        loggedIn = false;
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('welcomeMessage').style.display = 'none';
+        document.getElementById('options').style.display = 'none';
+        document.getElementById('balance').style.display = 'none';
+        document.getElementById('transfer').style.display = 'none';
+        document.getElementById('receive').style.display = 'none';
+        document.getElementById('withdrawal').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

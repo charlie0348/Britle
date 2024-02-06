@@ -1,0 +1,24 @@
+---------------------------------------------------
+Here are the ownership and the certification details
+of the Brittle BTC APP 1.0
+---------------------------------------------------
+
+app_name - 						Brittle BTC APP
+app_alias - 					brittlebtcapp
+app_author_name - 				My Company
+app_author_organizational - 	My Company
+app_author_organization - 		My Company
+app_author_locality - 			My Company
+app_author_state - 				Lagos
+app_author_country - 			Nigeria
+app_password - 					O6L0BHxjd6hQ
+app_versionName - 				versionName "1.0"
+app_versionCode - 				100
+
+---------------------------------------------------
+The certification was created by WebIntoApp.com at
+the Monday 5th of February 2024 06:54:06 AM
+
+https://www.webintoapp.com
+---------------------------------------------------
+
